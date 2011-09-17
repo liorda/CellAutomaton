@@ -19,7 +19,7 @@ while i<N
     nw = X(i,1:N-2);
     n = X(i, 2:N-1);
     ne = X(i,3:N);
-    l = nw+n+ne;
+
     X(i+1,2:N-1) = ( (n~=ne) | (ne==1&n==1&nw==0)); % Karnaugh map FTW
 
     set(h,'CData',X);%imshow(X);
